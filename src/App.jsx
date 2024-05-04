@@ -1,13 +1,18 @@
-import { getsResult } from "./utils"
-import IconRenderer from "./utils/IconRenderer"
-import { headingText } from "./utils/scratchStyles"
-
 function App() {
   return (
     <div>
-      <div className={`${headingText[0].buttonColor}`}>
-        The Design
-      </div>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Hero />
+        <Features />
+        <Pricing />
+        <FQAs />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }
