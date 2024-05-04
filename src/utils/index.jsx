@@ -1,4 +1,14 @@
+import { MdStackedLineChart } from "react-icons/md"
 import { figma, gameCenter, illustrator, photoshop, result1, result2, shape, slack, standOut, website1, website11, website12, website13, website14, website2, website3, website4 } from "../assets"
+import { LuCrown, LuMonitorSmartphone } from "react-icons/lu"
+import { TbUsersGroup } from "react-icons/tb"
+import { RiComputerFill } from "react-icons/ri"
+import { FaInstagram, FaMobile, FaPlus } from "react-icons/fa"
+import { IoStar } from "react-icons/io5"
+import { PiLightningFill } from "react-icons/pi"
+import { IoMdCheckmark } from "react-icons/io"
+import { FaXTwitter } from "react-icons/fa6"
+import { CiLinkedin, CiYoutube } from "react-icons/ci"
 
 export const navBar = [
     {
@@ -70,7 +80,7 @@ export const featuresHeading = [
 
 export const designSolutions = [
     {
-        icon: <LuCrown />,
+        icon: LuCrown,
         h3: "Stand-Out Design Solutions",
         p: "Custom design that fuels your startup's growth and sets you apart.",
         img: standOut
@@ -78,7 +88,7 @@ export const designSolutions = [
 ]
 export const getsResult = [
     {
-        icon: <MdStackedLineChart />,
+        icon: MdStackedLineChart,
         h3: "Design That Gets Results",
         p: "Data meets design – that's how we boost your startup's success.",
         img1: [result1, "Static income"],
@@ -87,7 +97,7 @@ export const getsResult = [
 ]
 export const trendStats = [
     {
-        icon: <LuMonitorSmartphone />,
+        icon: LuMonitorSmartphone,
         h3: "Design That Sets the Trend ",
         p: "We blend cutting-edge tech with killer visuals to make your startup unforgettable.",
         img1: [photoshop, "photoshop"],
@@ -101,7 +111,7 @@ export const trendStats = [
 
 export const expertise = [
     {
-        icon: <TbUsersGroup />,
+        icon: TbUsersGroup,
         h3: "Your Vision, Our Expertise",
         p: "From your big idea to launch day – we're with you every step of the way.",
         dialog1: ["How do you feel about the color palette and typography choices we've implemented?", "https://framerusercontent.com/images/q7ZR9LuIuYQcY8NMJPISW9adaRc.png"],
@@ -119,22 +129,22 @@ export const serviceHeading = [
 ]
 export const serviceArray = [
     {
-        img: <RiComputerFill />,
+        img: RiComputerFill,
         h3: "Web Design",
         p: "we craft user-centric designs that elevate your online presence – from lightning-fast e-commerce sites to sleek, informative landing pages."
     },
     {
-        img: <FaMobile />,
+        img: FaMobile,
         h3: "Mobile Design",
         p: "Mobile designs that are as beautiful as they are effective. We optimize every pixel for seamless navigation, boosting engagement and driving conversions across all devices."
     },
     {
-        img: <IoStar />,
+        img: IoStar,
         h3: "Brand Design",
         p: "From first impressions to lasting loyalty, we'll craft a brand identity that speaks to your ideal customer. With logos, style guides, and stunning visuals, we'll make sure your startup stands out."
     },
     {
-        img: <PiLightningFill />,
+        img: PiLightningFill,
         h3: "No Code Development",
         p: "Even if you're not a coding whiz, Framer lets you build amazing things. We'll handle the technical side, so you can focus on designing solutions that supercharge your startup."
     }
@@ -151,7 +161,7 @@ export const payingStarter = [
     {
         span: "Starter",
         h3: 999,
-        icon: <IoMdCheckmark />,
+        icon: IoMdCheckmark,
     }
 ]
 export const payingStarterArray = [
@@ -190,7 +200,7 @@ export const FQAsHeading = [
     {
         h2: "Got Questions? We've Got Answers.",
         p: "Everything you need to know about the product and billing.",
-        icon: <FaPlus />
+        icon: FaPlus
     }
 ]
 export const FQAsArray = [
@@ -220,7 +230,7 @@ export const commentsHeading = [
     {
         h2: "Don't Just Take Our Word For It",
         p: "Discover why our clients choose us for impactful design solutions.",
-        img: <IoStar />,
+        img: IoStar,
     }
 ]
 export const commentsArray = [
@@ -272,22 +282,22 @@ export const socialArr = [
     {
         title: "Twitter",
         link: "https://twitter.com/_YashrajVaghela",
-        icon: <FaXTwitter />
+        icon: FaXTwitter
     },
     {
         title: "Instagram",
         link: "https://www.instagram.com/",
-        icon: <FaInstagram />
+        icon: FaInstagram
     },
     {
         title: "linkedin",
         link: "https://www.linkedin.com/",
-        icon: <CiLinkedin />
+        icon: CiLinkedin
     },
     {
         title: "Youtube",
         link: "https://www.youtube.com/",
-        icon: <CiYoutube />
+        icon: CiYoutube
     },
 
 ]
