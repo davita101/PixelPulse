@@ -1,3 +1,5 @@
+import { FQAs, Features, Footer, Header, Hero, Pricing } from "./components"
+
 function App() {
   return (
     <div>
@@ -5,13 +7,13 @@ function App() {
         <Header />
       </header>
       <main>
-        <Hero />
-        <Features />
-        <Pricing />
-        <FQAs />
+        <Hero id="/hero" />
+        <Features id="/features" />
+        <Pricing id="/pricing" />
+        <FQAs id="fqas" />
       </main>
       <footer>
-        <Footer />
+        <Footer id='/footer' />
       </footer>
     </div>
   )

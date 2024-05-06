@@ -6,6 +6,8 @@ export const headingText = [
         secondaryHeading: "fs-secondary-300 font-bold",
         secondaryParagraph: "fs-secondary-200 opacity-[.6]",
         // Button
-        buttonColor: "btn--color"
+        buttonColor: "btn--color",
+        // Styles
+        flexCenter: "flex items-center"
     }
 ]
