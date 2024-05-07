@@ -12,19 +12,24 @@ import { CiLinkedin, CiYoutube } from "react-icons/ci"
 
 export const navBar = [
     {
+        link: "/",
         name: "Our Work"
     },
     {
+        link: "/features",
         name: "Features"
     },
     {
+        link: "/services",
         name: "Services"
     },
     {
+        link: "/pricing",
         name: "Pricing"
     },
     {
-        name: "FAQs"
+        link: "/fqas",
+        name: "FQAs"
     }
 ]
 export const hero = [
