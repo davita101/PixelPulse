@@ -1,0 +1,29 @@
+
+.mask--white {
+  position: relative;
+  overflow: hidden;
+}
+.mask--white::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px; /* Width of your mask */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  animation: maskAnimation 5s linear infinite;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
+.mask--white::before   {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px; /* Width of your mask */
+  height: 100%;
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  animation: maskAnimation 5s linear infinite;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+  z-index: 1;
+}

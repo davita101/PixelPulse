@@ -67,3 +67,46 @@ body{
   opacity: 1;
 }
   
+
+
+.Gallery {
+  display: flex;
+  max-height: 60vh;
+  min-height: 500px;
+  flex-direction: column;
+  text-align: center;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  font-family: 'Bodoni Moda', serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.GalleryContent {
+  display: flex;
+  gap: 30px;
+  animation: scrollImages 1s linear infinite;
+}
+
+.image {
+  width: calc(100% / 6); 
+  height: 600px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scrollImages {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
