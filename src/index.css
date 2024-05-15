@@ -15,7 +15,8 @@ html{
   --ff-primary: "Inter", sans-serif;
 
   --fs-primary-100: 56px;
-  --fs-primary-200: 84px;
+  --fs-primary-200: 42px;
+  --fs-primary-300: 84px;
 
   --fs-secondary-100: 12px;
   --fs-secondary-200: 14px;
@@ -27,6 +28,13 @@ html{
 }
 .fs-primary-200{
   font-size: var(--fs-primary-200);
+
+}
+.fs-primary-300{
+  font-size: var(--fs-primary-300);
+  max-width: 1500px;
+  line-height: 100px;
+  max-width: 70rem;
 }
 .fs-secondary-100{
   font-size: var(--fs-secondary-100);
@@ -37,14 +45,50 @@ html{
 .fs-secondary-300{
   font-size: var(--fs-secondary-300);
 }
-
+@media (max-width: 756px) {
+  .fs-primary-300{
+    font-size: var(--fs-primary-200);
+    max-width: 800px;
+    line-height: 45px;
+  }
+}
 .btn--color{
-  transition: all 300ms ease;
+  transition: all 200ms ease;
   background: transparent;
 }
 .btn--color:hover{
   background: linear-gradient(180deg, rgb(243, 135, 68) 0%, rgb(255, 114, 98) 100%);
   color: white;
+}
+.btn--color--1{
+  transition: all 500ms ease;
+  background: transparent;
+  color: white;
+  background: linear-gradient(180deg, rgb(243, 135, 68) 0%, rgb(255, 114, 98) 100%);
+  padding-inline: 30px;
+  padding-block: 8px;
+  border-radius: 50px;
+  font-size: var(--fs-secondary-200);
+}
+/* hovers */
+.arrow{
+  transition: all 200ms ease-in;
+  opacity: 0;
+  right: 1rem;
+  
+}
+.btn--color--1{
+  position: relative;
+}
+.btn--color--1:hover{
+  padding-right: 3rem;
+}
+.btn--color--1:hover .arrow{
+  transition: all 200ms ease-in;
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  opacity: 1;
 }
 /* hovers */
 
@@ -66,9 +110,6 @@ body{
   width: 100%;
   opacity: 1;
 }
-  
-
-
 .Gallery {
   display: flex;
   max-height: 60vh;
@@ -76,8 +117,8 @@ body{
   flex-direction: column;
   text-align: center;
   background: transparent;
-  backdrop-filter: blur(15px);
   font-family: 'Bodoni Moda', serif;
+  backdrop-filter: blur(15px);
   overflow: hidden;
   position: relative;
 }
@@ -101,7 +142,6 @@ body{
   height: 100%;
   object-fit: contain;
 }
-
 @keyframes scrollImages {
   0% {
     transform: translateX(100%);

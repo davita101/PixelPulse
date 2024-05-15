@@ -9,7 +9,7 @@ function App() {
       </header>
       <main>
         <Element name="/">
-          <InfiniteLooper id="/hero" />
+          <Hero id="/hero" />
         </Element>
         <Element name="/features">
           <Features id="/features" />

@@ -31,10 +31,11 @@ export const navBar = [
         link: "/fqas",
         name: "FQAs"
     }
+
 ]
 export const hero = [
     {
-        h1: "Struggling with blah design? We've got your back.",
+        h1: "Struggling with black design? We've got your back.",
         p: "Unlimited design, pause or cancel anytime."
     }
 ]

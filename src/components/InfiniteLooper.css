@@ -4,6 +4,7 @@
   overflow: hidden;
 }
 .mask--white::after {
+
   content: "";
   position: absolute;
   top: 0;
@@ -15,6 +16,8 @@
   mask-image: linear-gradient(black, transparent);
 }
 .mask--white::before   {
+  z-index: 1;
+
   content: "";
   position: absolute;
   top: 0;

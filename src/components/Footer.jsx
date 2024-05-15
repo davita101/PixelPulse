@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>
+        <div className='h-[100vh]'>
             Footer
         </div>
     )

@@ -30,7 +30,8 @@ function InfiniteLooper() {
         x: 0
       },
       {
-        x: window.innerWidth == 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
+
+        x: window.innerWidth >= 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
         repeat: -1,
         duration: 10,
         ease: "none"
@@ -38,7 +39,7 @@ function InfiniteLooper() {
       });
     gsap.fromTo("#Y > img",
       {
-        x: window.innerWidth == 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
+        x: window.innerWidth >= 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
       },
       {
         x: 0,
@@ -49,7 +50,7 @@ function InfiniteLooper() {
   }, [amount]);
 
   return (
-    <div className='flex pt-[5rem] flex-col gap-[1rem]'>
+    <div className='flex pt-[3rem] flex-col gap-[1rem]'>
       <div id='X' className='mask--white overflow-hidden gap-[16px] flex transition-transform duration-500'>
         {Array.from({ length: amount }).map((_, index) => (
           <React.Fragment key={index}>
@@ -63,7 +64,7 @@ function InfiniteLooper() {
         {Array.from({ length: amount }).map((_, index) => (
           <React.Fragment key={index}>
             {heroImagesSecond.map((item, i) => (
-              <img key={i} src={item.img} alt={item.title} className='sm:w-[360px] w-[320px] sm:h-[360px] h-[320px] rounded-xl   object-cover' />
+              <img key={i} src={item.img} alt={item.title} className='sm:w-[360px] w-[320px] sm:h-[360px] h-[320px] rounded-xl object-cover' />
             ))}
           </React.Fragment>
         ))}
