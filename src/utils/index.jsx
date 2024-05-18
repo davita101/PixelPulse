@@ -90,7 +90,7 @@ export const designSolutions = [
         h3: "Stand-Out Design Solutions",
         p: "Custom design that fuels your startup's growth and sets you apart.",
         img: standOut
-    }
+    },
 ]
 export const getsResult = [
     {

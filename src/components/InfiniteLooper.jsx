@@ -9,8 +9,13 @@ function InfiniteLooper() {
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 640) {
         setAmount(2)
-      } else if (window.innerWidth >= 1850) {
+      } else if (window.innerWidth >= 1850 && window.innerWidth <= 2550) {
         setAmount(3)
+
+      }
+      else if (window.innerWidth >= 2550) {
+        setAmount(7)
+        console.log('sss')
       }
       else {
         setAmount(3)
@@ -19,8 +24,13 @@ function InfiniteLooper() {
     )
     if (window.innerWidth <= 640) {
       setAmount(2)
-    } else if (window.innerWidth >= 1850) {
+    } else if (window.innerWidth >= 1850 && window.innerWidth <= 2550) {
       setAmount(3)
+
+    }
+    else if (window.innerWidth >= 2550) {
+      setAmount(7)
+      console.log('sss')
     }
     else {
       setAmount(3)

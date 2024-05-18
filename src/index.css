@@ -16,7 +16,8 @@ html{
 
   --fs-primary-100: 56px;
   --fs-primary-200: 42px;
-  --fs-primary-300: 84px;
+  --fs-primary-300: 40px;
+  --fs-primary-400: 84px;
 
   --fs-secondary-100: 12px;
   --fs-secondary-200: 14px;
@@ -25,19 +26,22 @@ html{
 }
 .fs-primary-100{
   font-size: var(--fs-primary-100);
+  max-width: 1500px;
+  line-height: 60px;
+  max-width: 70rem;
 }
 .fs-primary-200{
   font-size: var(--fs-primary-200);
-
 }
-.fs-primary-300{
-  font-size: var(--fs-primary-300);
+.fs-primary-400{
+  font-size: 84px;
   max-width: 1500px;
   line-height: 100px;
   max-width: 70rem;
 }
 .fs-secondary-100{
   font-size: var(--fs-secondary-100);
+
 }
 .fs-secondary-200{
   font-size: var(--fs-secondary-200);
@@ -45,11 +49,20 @@ html{
 .fs-secondary-300{
   font-size: var(--fs-secondary-300);
 }
-@media (max-width: 756px) {
-  .fs-primary-300{
+.fs-secondary-400{
+  font-size: var(--fs-secondary-400);
+}
+@media (max-width: 950px) {
+  .fs-primary-400{
     font-size: var(--fs-primary-200);
     max-width: 800px;
     line-height: 45px;
+  }
+  .fs-primary-100{
+    font-size: var(--fs-primary-300);
+    max-width: 1500px;
+    line-height: 40px;
+    max-width: 70rem;
   }
 }
 .btn--color{
@@ -141,12 +154,4 @@ body{
 .image img {
   height: 100%;
   object-fit: contain;
-}
-@keyframes scrollImages {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
