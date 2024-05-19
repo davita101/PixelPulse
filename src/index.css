@@ -41,7 +41,6 @@ html{
 }
 .fs-secondary-100{
   font-size: var(--fs-secondary-100);
-
 }
 .fs-secondary-200{
   font-size: var(--fs-secondary-200);
@@ -57,6 +56,10 @@ html{
     font-size: var(--fs-primary-200);
     max-width: 800px;
     line-height: 45px;
+  }
+  .fs-secondary-100{
+    font-size: 8px;
+    max-width: 200px;
   }
   .fs-primary-100{
     font-size: var(--fs-primary-300);

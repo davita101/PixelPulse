@@ -90,7 +90,7 @@ export const designSolutions = [
         h3: "Stand-Out Design Solutions",
         p: "Custom design that fuels your startup's growth and sets you apart.",
         img: standOut
-    },
+    }
 ]
 export const getsResult = [
     {
@@ -119,11 +119,13 @@ export const expertise = [
     {
         icon: TbUsersGroup,
         h3: "Your Vision, Our Expertise",
+        img1: "https://framerusercontent.com/images/q7ZR9LuIuYQcY8NMJPISW9adaRc.png",
+        img2: "https://framerusercontent.com/images/oMMsqQR2ndxrwQC68kd2DkGZtU.png",
         p: "From your big idea to launch day – we're with you every step of the way.",
-        dialog1: ["How do you feel about the color palette and typography choices we've implemented?", "https://framerusercontent.com/images/q7ZR9LuIuYQcY8NMJPISW9adaRc.png"],
-        dialog2: ["I appreciate the direction, but I think we could explore bolder options for the typography to better reflect our brand's personality.", "https://framerusercontent.com/images/oMMsqQR2ndxrwQC68kd2DkGZtU.png"],
-        dialog3: ["Sure thing! I'll tweak the typography to better suit your brand's style. Thanks for letting me know!"],
-        dialog4: ["Sounds good, appreciate you taking care of it! Looking forward to seeing the updated designs."]
+        dialogFirst1: ["How do you feel about the color palette and typography choices we've implemented?"],
+        dialogSecond1: ["I appreciate the direction, but I think we could explore bolder options for the typography to better reflect our brand's personality."],
+        dialogFirsrt2: ["Sure thing! I'll tweak the typography to better suit your brand's style. Thanks for letting me know!"],
+        dialogSecond2: ["Sounds good, appreciate you taking care of it! Looking forward to seeing the updated designs."]
     }
 ]
 // feature end
