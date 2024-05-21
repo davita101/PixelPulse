@@ -13,7 +13,10 @@ function Box() {
         const tl1 = gsap.timeline({ paused: true })
         const tl2 = gsap.timeline({ paused: true })
         // expertise
-        const tl3 = gsap.timeline({ paused: true })
+        const tlE1 = gsap.timeline({ paused: true })
+        const tlE2 = gsap.timeline({ paused: true })
+        const tlE3 = gsap.timeline({ paused: true })
+        const tlE4 = gsap.timeline({ paused: true })
 
 
         tl.fromTo(
@@ -30,7 +33,6 @@ function Box() {
                 scrollTrigger: {
                     trigger: "#D",
                     onEnter: () => tl.play(),
-                    onLeave: () => tl.stop(),
                 },
             }
         )
@@ -42,7 +44,6 @@ function Box() {
                 scrollTrigger: {
                     trigger: "#G1",
                     onEnter: () => tl1.play(),
-                    onLeave: () => tl1.play(),
                 },
             }, 0
         )
@@ -61,7 +62,6 @@ function Box() {
             scrollTrigger: {
                 trigger: "#T1",
                 onEnter: () => tl2.play(),
-                onLeave: () => tl2.play(),
             },
 
         }, 0)
@@ -86,42 +86,45 @@ function Box() {
                 right: "4rem"
             }, 0)
 
-        tl3.to("#E1", {
+        gsap.to("#E1", {
             top: "2rem",
             opacity: 1,
             left: "1rem",
             scrollTrigger: {
-                trigger: "#E1",
-                onEnter: () => tl3.play(),
-                onLeave: () => tl3.play(),
+                trigger: "#E",
+                start: "top 900rem",
             },
-            duration: 1
 
         }, 0)
-            .to("#E2", {
-                opacity: 1,
-                bottom: "10rem",
-                left: "1rem",
-                duration: 1
-            }, 0)
-            .to("#E3", {
-                opacity: 1,
-                top: "7rem",
-                right: "1rem",
-                duration: 1
-            }, 0)
-            .to("#E3", {
-                opacity: 1,
-                top: "8rem",
-                right: "1rem",
-                duration: 1
-            }, 0)
-            .to("#E4", {
-                opacity: 1,
-                bottom: "4rem",
-                right: "1rem",
-                duration: 1
-            }, 0)
+        gsap.to("#E2", {
+            opacity: 1,
+            bottom: "10rem",
+            left: "1rem",
+            scrollTrigger: {
+                trigger: "#E2",
+                start: "top 800rem",
+            },
+
+        }, 0)
+        gsap.to("#E3", {
+            opacity: 1,
+            top: "8rem",
+            right: "1rem",
+            scrollTrigger: {
+                trigger: "#E3",
+                start: "top 1000rem",
+
+            },
+        }, 0)
+        gsap.to("#E4", {
+            opacity: 1,
+            bottom: "4rem",
+            right: "1rem",
+            scrollTrigger: {
+                trigger: "#E2",
+                start: "top 700rem",
+            },
+        }, 0)
 
     }, [])
 
@@ -169,7 +172,7 @@ function Box() {
                         <img id="T4" className='w-[3rem] absolute h-[3rem]' src={trendStats[0].img4[0]} alt={trendStats[0].img4[1]} />
                         <img id="T5" className='w-[3rem]  absolute h-[3rem]' src={trendStats[0].img5[0]} alt={trendStats[0].img5[1]} />
                         <img id="T6" className='w-[3rem] absolute h-[3rem]' src={trendStats[0].img6[0]} alt={trendStats[0].img6[1]} />
-                        <div id="T7" className='shadow-lg relative z-[5] p-[1rem] rounded-full bg-orange-400 text-[3rem] text-white'>
+                        <div id="T7" className='shadow-lg relative z-[5] sm:p-[2rem] p-[1rem] rounded-full bg-orange-400 sm:text-[8rem] text-[3rem] text-white'>
                             <IconRenderer id="T7" img={trendStats[0].icon} />
                         </div>
                     </div>
@@ -182,7 +185,7 @@ function Box() {
                         <h3 className='fs-secondary-400 font-bold text-gray-700'>{expertise[0].h3}</h3>
                     </div>
                     <p className={`${headingText[0].secondaryParagraph} text-start `} >{expertise[0].p}</p>
-                    <div className='sm:m-0 overflow-hidden relative lg:max-w-[30rem] sm:w-[90vw] w-full h-[29rem] mt-[1rem] bg-[#f7f7f7] rounded-lg flex items-center justify-center'>
+                    <div id="E" className='sm:m-0 overflow-hidden relative lg:max-w-[30rem] sm:w-[90vw] w-full h-[29rem] mt-[1rem] bg-[#f7f7f7] rounded-lg flex items-center justify-center'>
                         {/* First person */}
                         <div id='E1' className='flex opacity-[0] absolute left-[-100rem] items-end gap-[1rem]'>
                             <div className='bg-white shadow-sm shadow-orange-100 p-[1rem] max-w-[400px] text-start rounded-xl'>
