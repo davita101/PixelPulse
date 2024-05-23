@@ -6,17 +6,12 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 function Box() {
     useEffect(() => {
-        window.viewport
         gsap.registerPlugin(ScrollTrigger)
         const tl = gsap.timeline({ paused: true })
         // designSolutions
         const tl1 = gsap.timeline({ paused: true })
         const tl2 = gsap.timeline({ paused: true })
         // expertise
-        const tlE1 = gsap.timeline({ paused: true })
-        const tlE2 = gsap.timeline({ paused: true })
-        const tlE3 = gsap.timeline({ paused: true })
-        const tlE4 = gsap.timeline({ paused: true })
 
 
         tl.fromTo(

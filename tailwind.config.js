@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'md': "rgba(0, 0, 0, 0.05) 0px 0px 0px 2px",
+      },
       animation: {
         "loop-scroll": "loop-scroll 50s linear infinity"
       },

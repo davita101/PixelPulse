@@ -3,7 +3,7 @@ function IconRenderer(props) {
     const Icon = props.img
     return (
         <div>
-            <Icon className={props.class} />
+            <Icon className={props.class} alt={props.alt} />
         </div>
     )
 }

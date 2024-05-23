@@ -1,5 +1,5 @@
 import { Element } from "react-scroll"
-import { FQAs, Features, Footer, Header, Hero, InfiniteLooper, Pricing, Services } from "./components"
+import { FQAs, Features, Footer, Header, Hero, Pricing, Services } from "./components"
 
 function App() {
   return (
@@ -14,14 +14,14 @@ function App() {
         <Element name="/features">
           <Features id="/features" />
         </Element>
+        <Element name="/services">
+          <Services id="/services" />
+        </Element>
         <Element name="/pricing">
           <Pricing id="/pricing" />
         </Element>
-        <Element name="/services">
-          <Services id="services" />
-        </Element>
         <Element name="/fqas">
-          <FQAs id="fqas" />
+          <FQAs id="/fqas" />
         </Element>
       </main>
       <footer>
