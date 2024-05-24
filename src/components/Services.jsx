@@ -17,7 +17,6 @@ function Services() {
                 start: "30 top",
                 end: 'bottom',
                 scrub: true,
-                markers: true,
             }
         })
         tl.fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" })
@@ -40,8 +39,9 @@ function Services() {
             .fromTo("#H1", { yPercent: -86 }, { yPercent: -112, duration: 1, ease: "none" }, 3)
             // ------------------------------------------------------------------ 4 
             .fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" }, 4)
-            .fromTo("#M", { height: "100%" }, { height: ` ${window.innerWidth > 1024 ? "30%" : window.innerWidth > 520 ? "40rem" : "45rem"}`, duration: 1, ease: "none" }, 3)
-        tl.seek(1.5)
+            .fromTo("#M", { height: "100%" }, { height: ` ${window.innerWidth > 1024 ? "40%" : window.innerWidth > 520 ? "40%" : "45%"}`, duration: 1, ease: "none" }, 2)
+            .fromTo("#M", { height: "45%" }, { height: ` ${window.innerWidth > 1024 ? "30%" : window.innerWidth > 520 ? "40%" : "45%"}`, duration: 1, ease: "none" }, 3)
+        tl.seek(5)
 
         const tlM = gsap.timeline({
             scrollTrigger: {
@@ -51,15 +51,17 @@ function Services() {
                 scrub: true,
             }
         })
-        // ------------------------------------------------------------------------
-        tlM.fromTo("#H", { yPercent: 0 }, { yPercent: 100, ease: "none" });
+            // ------------------------------------------------------------------------
+            .fromTo("#H", { yPercent: 0 }, { yPercent: 100, ease: "none" }, 0)
+        ScrollTrigger.refresh()
+
     }, [gsap]);
 
     return (
         <div id='H' className='sm:pt-[3rem] w-full relative h-full flex flex-col items-center lg:p-[2rem] p-[1rem] pt-[2rem] sm:pb-[3rem] pb-[3rem]'>
             <div id='M' className='w-full absolute bg-white' />
             <div className='w-full mt-[4rem] relative xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
-                <div className='lg:flex relative grid lg:text-start text-center flex-col lg:items-start items-center gap-5'>
+                <div id="S" className='lg:flex relative grid lg:text-start text-center flex-col lg:items-start items-center gap-5'>
                     <h2 className={`${headingText[0].primaryHeadingSmall} `}>Choose Your {window.innerWidth > 1024 && <br />} Design Adventure</h2>
                     <p className={`${headingText[0].secondaryParagraph}`}>{serviceHeading[0].p}</p>
                     <Button className='lg:justify-start justify-center' />
