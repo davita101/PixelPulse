@@ -36,6 +36,9 @@ html{
 .fs-primary-200{
   font-size: var(--fs-primary-200);
 }
+.fs-primary-300{
+  font-size: var(--fs-primary-300);
+}
 .fs-primary-400{
   font-size: 84px;
   max-width: 1500px;

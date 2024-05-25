@@ -167,41 +167,17 @@ export const payingHeading = [
 ]
 export const payingStarter = [
     {
-        span: "Starter",
-        h3: 999,
         icon: IoMdCheckmark,
     }
 ]
-export const payingStarterArray = [
-    {
-        h4: "Pause / cancel anytime",
-        h4: "Dedicated project manager",
-        h4: "Easy to manage design requests",
-        h4: "1 request at the time",
-        h4: "24/7 Priority Support",
-        h4: "Framer Development",
-        h4: "SEO Marketing",
-        h4: "2 Weeks Delivery"
-    }
-]
-export const payingPremium = [
-    {
-        span: "Premium",
-        h3: 2499,
-    }
-]
+export const payingStarterArray =
+    ["Pause / cancel anytime", "Dedicated project manager", "Easy to manage design requests", "1 request at the time", "24/7 Priority Support", "Framer Development", "SEO Marketing", "2 Weeks Delivery"
+    ]
+
 
 export const payingPremiumArray = [
-    {
-        h4: "Pause / cancel anytime",
-        h4: "Dedicated project manager",
-        h4: "Easy to manage design requests",
-        h4: "2 request at the time",
-        h4: "24/7 Priority Support",
-        h4: "Framer Development",
-        h4: "SEO Marketing",
-        h4: "1 Week Delivery "
-    }
+    "Pause / cancel anytime", "Dedicated project manager", "Easy to manage design requests", "2 request at the time", "24/7 Priority Support", "Framer Development", "SEO Marketing", "1 Week Delivery "
+
 ]
 // FQAs
 export const FQAsHeading = [

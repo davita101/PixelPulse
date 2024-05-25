@@ -2,23 +2,24 @@ import React, { useEffect } from 'react';
 import { serviceArray, serviceHeading } from '../utils';
 import { headingText } from '../utils/scratchStyles';
 import IconRenderer from '../utils/IconRenderer';
-import { Button } from '.';
+import { Button, Pricing } from '.';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import { Element } from 'react-scroll';
 function Services() {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
         // Scroll animation
         let tl = gsap.timeline({
-            // yes, we can add it to an entire timeline!
             scrollTrigger: {
                 trigger: '#H',
-                pin: true, // pin the trigger element while active
-                start: '30 top', // when the top of the trigger hits the top of the viewport
-                end: '+=1300px', // end after scrolling 500px beyond the start
-                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                pin: true,
+                start: '30 top',
+                end: '1500rem',
+                scrub: 2,
                 pinSpacing: false,
+                toggleActions: "start pause reverse pause"
             }
         })
         tl.fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" })
@@ -41,20 +42,23 @@ function Services() {
             .fromTo("#H1", { yPercent: -86 }, { yPercent: -112, duration: 1, ease: "none" }, 3)
             // ------------------------------------------------------------------ 4 
             .fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" }, 4)
-            .fromTo("#M", { height: "100%" }, { height: ` ${window.innerWidth > 1024 ? "50%" : window.innerWidth > 520 ? "50%" : "50%"}`, duration: 1, ease: "none" }, 2)
-            .fromTo("#M", { height: `50%` }, { height: ` ${window.innerWidth > 1024 ? "30%" : window.innerWidth > 520 ? "40%" : "45rem"}`, duration: 1, ease: "none" }, 3)
-        tl.seek(5)
+            .fromTo("#M", { height: "80%", ease: "none" }, { height: ` ${window.innerWidth > 1024 ? "50%" : window.innerWidth > 520 ? "50%" : "50%"}`, duration: 1, ease: "none" }, 2)
+            .fromTo("#M", { height: `50%`, ease: "none" }, { height: ` ${window.innerWidth > 1024 ? "30%" : window.innerWidth > 520 ? "40%" : "45rem"}`, duration: 1, ease: "none" }, 3)
+            .to('#HM', { height: '50rem' })
+        tl.seek()
 
 
         return () => {
-            tl.kill()
+            tl.revert()
         }
-    }, [])
+    }, [gsap])
 
     return (
-        <div id='H' className='sm:pt-[3rem] w-full relative h-full flex flex-col items-center lg:p-[2rem] p-[1rem] pt-[2rem] sm:pb-[3rem] pb-[3rem]'>
-            <div id='M' className='w-full absolute bg-white' />
-            <div className='w-full mt-[6rem] relative xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
+        <div id='H' className='sm:pt-[3rem] w-full relative lg:h-[1500px] h-full flex flex-col items-center lg:p-[2rem] p-[1rem] pt-[2rem] sm:pb-[3rem] pb-[3rem] bg-[#f7f7f7]'>
+            <Element name='/pricing' id='M' className=' w-full absolute bg-white' >
+                <Pricing id='services' className="z-[99] absolute" />
+            </Element>
+            <div id='F' className='w-full mt-[6rem] relative  xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
                 <div className='lg:flex relative grid lg:text-start text-center flex-col lg:items-start items-center gap-5'>
                     <h2 className={`${headingText[0].primaryHeadingSmall} `}>Choose Your {window.innerWidth > 1024 && <br />} Design Adventure</h2>
                     <p className={`${headingText[0].secondaryParagraph}`}>{serviceHeading[0].p}</p>
