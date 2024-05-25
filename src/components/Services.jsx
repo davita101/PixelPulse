@@ -10,14 +10,15 @@ function Services() {
 
     useEffect(() => {
         // Scroll animation
-        const tl = gsap.timeline({
-            yoyo: true,
+        let tl = gsap.timeline({
+            // yes, we can add it to an entire timeline!
             scrollTrigger: {
-                trigger: "#H",
-                start: "30 top",
-                end: 'bottom',
-                scrub: true,
-                markers: true,
+                trigger: '#H',
+                pin: true, // pin the trigger element while active
+                start: '30 top', // when the top of the trigger hits the top of the viewport
+                end: '+=1300px', // end after scrolling 500px beyond the start
+                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                pinSpacing: false,
             }
         })
         tl.fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" })
@@ -40,25 +41,20 @@ function Services() {
             .fromTo("#H1", { yPercent: -86 }, { yPercent: -112, duration: 1, ease: "none" }, 3)
             // ------------------------------------------------------------------ 4 
             .fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" }, 4)
-            .fromTo("#M", { height: "100%" }, { height: ` ${window.innerWidth > 1024 ? "30%" : window.innerWidth > 520 ? "40rem" : "45rem"}`, duration: 1, ease: "none" }, 3)
-        tl.seek(1.5)
+            .fromTo("#M", { height: "100%" }, { height: ` ${window.innerWidth > 1024 ? "50%" : window.innerWidth > 520 ? "50%" : "50%"}`, duration: 1, ease: "none" }, 2)
+            .fromTo("#M", { height: `50%` }, { height: ` ${window.innerWidth > 1024 ? "30%" : window.innerWidth > 520 ? "40%" : "45rem"}`, duration: 1, ease: "none" }, 3)
+        tl.seek(5)
 
-        const tlM = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#H",
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
-            }
-        })
-        // ------------------------------------------------------------------------
-        tlM.fromTo("#H", { yPercent: 0 }, { yPercent: 100, ease: "none" });
-    }, [gsap]);
+
+        return () => {
+            tl.kill()
+        }
+    }, [])
 
     return (
         <div id='H' className='sm:pt-[3rem] w-full relative h-full flex flex-col items-center lg:p-[2rem] p-[1rem] pt-[2rem] sm:pb-[3rem] pb-[3rem]'>
             <div id='M' className='w-full absolute bg-white' />
-            <div className='w-full mt-[4rem] relative xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
+            <div className='w-full mt-[6rem] relative xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
                 <div className='lg:flex relative grid lg:text-start text-center flex-col lg:items-start items-center gap-5'>
                     <h2 className={`${headingText[0].primaryHeadingSmall} `}>Choose Your {window.innerWidth > 1024 && <br />} Design Adventure</h2>
                     <p className={`${headingText[0].secondaryParagraph}`}>{serviceHeading[0].p}</p>
