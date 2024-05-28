@@ -18,6 +18,7 @@ function App() {
         <Element name="/services">
           <Services id="/services" />
         </Element>
+        <Element name="/pricing" />
         <Element name="/fqas">
           <FQAs id="/fqas" />
         </Element>

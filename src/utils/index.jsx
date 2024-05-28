@@ -190,7 +190,7 @@ export const FQAsHeading = [
 export const FQAsArray = [
     {
         h3: "What types of services do you offer?",
-        p: "We offer a range of services including web design, web development, graphic design, branding, and digital marketing."
+        p: "From brand identity development to website design, we offer a comprehensive range of design services tailored to meet your needs. Whether you're launching a new business or rebranding an existing one, we're here to help bring your vision to life."
     },
     {
         h3: "How do you approach the design process?",
@@ -198,15 +198,15 @@ export const FQAsArray = [
     },
     {
         h3: "What sets your agency apart from others?",
-        p: "Our agency stands out for our creativity, attention to detail, and commitment to customer satisfaction. We also prioritize communication and transparency throughout the project."
+        p: "At our agency, we blend creativity with strategy to deliver designs that not only look visually stunning but also drive results. Our team consists of experienced designers who stay updated with the latest design trends and technologies to provide innovative solutions. We prioritize communication, reliability, and delivering projects on time and within budget."
     },
     {
         h3: "Do you work with clients internationally?",
-        p: "Yes, we work with clients from around the world. We use online collaboration tools to effectively communicate with our international clients."
+        p: "Yes, we work with clients from all around the globe. Thanks to modern communication technologies, we can collaborate effectively with clients regardless of their location. Whether you're based locally or internationally, we're dedicated to providing the same level of high-quality service and attention to detail."
     },
     {
         h3: "Can you help with ongoing design needs after the initial project is completed?",
-        p: "Yes, we offer ongoing support and maintenance services to meet our clients' evolving design needs."
+        p: "Absolutely! We believe in building long-term relationships with our clients. Once your initial project is completed, we're here to support you with any ongoing design needs you may have, whether it's updating your website, creating new marketing materials, or evolving your brand as your business grows. "
     }
 ];
 

@@ -38,6 +38,7 @@ html{
 }
 .fs-primary-300{
   font-size: var(--fs-primary-300);
+  background: #f9f9f9;
 }
 .fs-primary-400{
   font-size: 84px;
