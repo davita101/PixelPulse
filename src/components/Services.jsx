@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { serviceArray, serviceHeading } from '../utils';
 import { headingText } from '../utils/scratchStyles';
 import IconRenderer from '../utils/IconRenderer';
@@ -7,7 +7,10 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 function Services() {
     gsap.registerPlugin(ScrollTrigger);
-
+    const [size, setSize] = useState(window.innerWidth)
+    window.addEventListener("resize", () => {
+        setSize(window.innerWidth)
+    })
     useEffect(() => {
         // Scroll animation
         let tl = gsap.timeline({
@@ -15,8 +18,8 @@ function Services() {
                 trigger: '#H',
                 pin: true,
                 start: 'top top',
-                end: '1500rem top',
-                scrub: 2,
+                end: '100% center',
+                scrub: 1,
                 pinSpacing: true,
             }
         })
@@ -39,17 +42,14 @@ function Services() {
             .fromTo("#H2", { yPercent: -170 }, { yPercent: -222, duration: 1, ease: "none" }, 3)
             .fromTo("#H1", { yPercent: -86 }, { yPercent: -112, duration: 1, ease: "none" }, 3)
             // ------------------------------------------------------------------ 4 
-            .fromTo("#H0", { yPercent: 0 }, { yPercent: 0, duration: 1, ease: "none" }, 4)
-            .fromTo("#M", { height: "80%", ease: "none" }, { height: ` ${window.innerWidth > 1024 ? "50%" : window.innerWidth > 520 ? "50%" : "50%"}`, duration: 1, ease: "none" }, 2)
-            .fromTo("#M", { height: `50%`, ease: "none" }, { height: ` ${window.innerWidth > 1024 ? "33%" : window.innerWidth > 520 ? "40%" : "45%"}`, duration: 1, ease: "none" }, 3)
+            .fromTo("#M", { height: "80%", ease: "none" }, { height: ` ${size > 1024 ? "50%" : size > 520 ? "50%" : "50%"}`, duration: 1, ease: "none" }, 2)
+            .fromTo("#M", { height: `50%`, ease: "none" }, { height: ` ${size > 1024 ? "33%" : size > 520 ? "40%" : "45%"}`, duration: 1, ease: "none" }, 3)
             .to('#HM', { height: '50rem' })
         tl.seek()
-
-
         return () => {
             tl.kill()
         }
-    }, [gsap])
+    }, [size])
 
     return (
         <div id='H' className='sm:pt-[3rem] w-full relative lg:h-[1350px] h-full flex flex-col items-center lg:p-[2rem] p-[1rem] pt-[2rem] sm:pb-[3rem] pb-[3rem] bg-[#f7f7f7]'>
@@ -58,7 +58,7 @@ function Services() {
             </div>
             <div id='F' className='w-full mt-[6rem] relative  xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
                 <div className='lg:flex relative grid lg:text-start text-center flex-col lg:items-start items-center gap-5'>
-                    <h2 className={`${headingText[0].primaryHeadingSmall}`}>Choose Your {window.innerWidth > 1024 && <br />} Design Adventure</h2>
+                    <h2 className={`${headingText[0].primaryHeadingSmall}`}>Choose Your {size > 1024 && <br />} Design Adventure</h2>
                     <p className={`${headingText[0].secondaryParagraph}`}>{serviceHeading[0].p}</p>
                     <Button className='lg:justify-start justify-center' />
                 </div>

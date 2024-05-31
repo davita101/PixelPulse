@@ -1,6 +1,6 @@
 export { default as Box } from './Box'
 export { default as Button } from './Button'
-export { default as Comunity } from './Comunity'
+export { default as Community } from './Community'
 export { default as Features } from './Features'
 export { default as Footer } from './Footer'
 export { default as FQAs } from './FQAs'

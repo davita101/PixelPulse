@@ -210,14 +210,14 @@ export const FQAsArray = [
     }
 ];
 
-export const comunityHeading = [
+export const communityHeading = [
     {
         h2: "Don't Just Take Our Word For It",
         p: "Discover why our clients choose us for impactful design solutions.",
         img: IoStar,
     }
 ]
-export const comunityArray = [
+export const communityArray = [
     {
         p: "These guys made the whole design process so easy! They really listened to what I wanted, offered some great ideas I wouldn't have thought of, and everything was done on time. Super happy with the result.",
         title: "John Doe",
@@ -247,22 +247,50 @@ export const comunityArray = [
         img: "https://framerusercontent.com/images/LZYY71GfAAmwFGFURcEc4dfpoY.jpg?scale-down-to=1024"
     }
 ]
+export const commentsHeading = [
+    {
+        h2: "Don't Just Take Our Word For It",
+        p: "Discover why our clients choose us for impactful design solutions.",
+        img: IoStar,
+    }
+]
+export const commentsArray = [
+    {
+        p: "These guys made the whole design process so easy! They really listened to what I wanted, offered some great ideas I wouldn't have thought of, and everything was done on time. Super happy with the result.",
+        title: "John Doe",
+        h4: "John Doe",
+        span: "Duis rhoncus",
+        img: "https://framerusercontent.com/images/7ckekOZAa0J28C2T3IfYTvNDv5U.jpg?scale-down-to=1024"
+    },
+    {
+        p: "I can't thank this team enough for their expertise and professionalism. From the initial consultation to the final product, they were attentive to my vision and added their creative touch to enhance it.",
+        title: "Marcus Lee",
+        h4: "Marcus Lee",
+        span: "DRX Consulting",
+        img: "https://framerusercontent.com/images/w2hyXovpoCcfHZkjR4Hmr53RA5o.jpg?scale-down-to=1024"
+    },
+    {
+        p: "Working with this team was a breeze! They took my scattered ideas and turned them into a cohesive design that exceeded my expectations. Their attention to detail made the entire process stress-free.",
+        title: "Jack W",
+        h4: "Jack W.",
+        span: "Kaut Marketing",
+        img: "https://framerusercontent.com/images/lZTqZTGcaqGuaCWqqriCJCIv0QU.jpg?scale-down-to=512"
+    },
+    {
+        p: "Choosing this team for my design project was the best decision I made. They were attentive, collaborative, and brought fresh perspectives to the table. The end result was beyond what I imagined",
+        title: "Emily Johnson",
+        h4: "Emily Johnson",
+        span: "Fast Agency ltd"
+    }
+]
 
-export const footerHeaing = [
+export const footerHeading = [
     {
         h2: "Ready for Growth? Let's Talk",
         copyright: "© 2024 PixelPulse. All rights reserved."
     }
 ]
-export const footerArray = [
-    {
-        span: "Our work",
-        span: "Features",
-        span: "Services",
-        span: "Pricing",
-        span: "FAQs",
-    }
-]
+
 export const socialArr = [
     {
         title: "Twitter",

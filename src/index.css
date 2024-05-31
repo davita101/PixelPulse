@@ -134,6 +134,18 @@ body{
   width: 100%;
   opacity: 1;
 }
+
+.ul-container .line-v1{
+  width: 0%;
+  height: 2px; border-radius: 10px;
+  background: white;
+  transition: all 200ms ease-in;
+  opacity: 0;
+}
+.ul-container:hover .line-v1{
+  width: 100%;
+  opacity: 1;
+}
 .Gallery {
   display: flex;
   max-height: 60vh;
