@@ -210,14 +210,14 @@ export const FQAsArray = [
     }
 ];
 
-export const commentsHeading = [
+export const comunityHeading = [
     {
         h2: "Don't Just Take Our Word For It",
         p: "Discover why our clients choose us for impactful design solutions.",
         img: IoStar,
     }
 ]
-export const commentsArray = [
+export const comunityArray = [
     {
         p: "These guys made the whole design process so easy! They really listened to what I wanted, offered some great ideas I wouldn't have thought of, and everything was done on time. Super happy with the result.",
         title: "John Doe",
@@ -243,7 +243,8 @@ export const commentsArray = [
         p: "Choosing this team for my design project was the best decision I made. They were attentive, collaborative, and brought fresh perspectives to the table. The end result was beyond what I imagined",
         title: "Emily Johnson",
         h4: "Emily Johnson",
-        span: "Fast Agency ltd"
+        span: "Fast Agency ltd",
+        img: "https://framerusercontent.com/images/LZYY71GfAAmwFGFURcEc4dfpoY.jpg?scale-down-to=1024"
     }
 ]
 

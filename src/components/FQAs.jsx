@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import { FQAsArray, FQAsHeading } from '../utils'
 import { headingText } from '../utils/scratchStyles'
+import { Comunity } from "./"
 import IconRenderer from '../utils/IconRenderer'
 
 function FQAs() {
     const [indexSaver, setIndexSaver] = useState([])
-    const [indexer, setIndexer] = useState(0)
     const toggleIndex = (index) => {
         setIndexSaver(prevIndex =>
             prevIndex.includes(index) ? prevIndex.filter(item => item !== index) : [...prevIndex, index]
         )
     }
     return (
-        <div className=' lg:pt-[92rem] pt-[135rem] p-[2rem] flex justify-center items-center flex-col bg-white'>
+        <div className=' lg:mt-[92rem] mt-[135rem] p-[2rem] flex justify-center items-center flex-col bg-white'>
             <div className='w-full mt-[6rem] relative  xl:w-[68rem]'>
                 <div className=' justify-between flex flex-col text-center gap-[1rem] sm:p-0 p-[1rem] font-normal'>
                     <h2 className={`${headingText[0].primaryHeadingSmall} `}>{FQAsHeading[0].h2}</h2>
@@ -38,6 +38,7 @@ function FQAs() {
                     </ul>
                 </div>
             </div>
+            <Comunity />
 
         </div>
     )

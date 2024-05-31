@@ -30,3 +30,50 @@
   mask-image: linear-gradient(black, transparent);
   z-index: 1;
 }
+
+.mask--white--v1 {
+  position: relative;
+  overflow: hidden;
+}
+.mask--white--v1::after {
+  content: "";
+  position: absolute;
+  top: 2;
+  width: 100px; /* Width of your mask */
+  height: 100%;
+  background: linear-gradient(to right,rgb(249 249 249) 60%, rgba(0, 0, 0, 0) 100%);
+}
+.mask--white--v1::before   {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 2;
+  right: 0;
+  width: 100px; /* Width of your mask */
+  height: 100%;
+  background: linear-gradient(to left,rgb(249 249 249) 60%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+@media (max-width: 520px) {
+  .mask--white--v1::after {
+    content: "";
+    position: absolute;
+    top: 2;
+    left: -2rem;
+    width: 100px; /* Width of your mask */
+    height: 100%;
+    background: linear-gradient(to right,rgb(249 249 249) 60%, rgba(0, 0, 0, 0) 100%);
+  }
+  .mask--white--v1::before   {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 2;
+    right: -2rem;
+    width: 100px; /* Width of your mask */
+    height: 100%;
+    background: linear-gradient(to left,rgb(249 249 249) 60%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+  }
+}

@@ -18,7 +18,7 @@ function App() {
         <Element name="/services">
           <Services id="/services" />
         </Element>
-        <Element name="/pricing" />
+        <Element name="/pricing" className="mt-[35rem]" />
         <Element name="/fqas">
           <FQAs id="/fqas" />
         </Element>
