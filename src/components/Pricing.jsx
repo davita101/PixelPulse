@@ -6,7 +6,7 @@ import Button from './Button'
 
 function Pricing() {
     return (
-        <div className='bg-[#f9f9f9] md:p-[2rem] p-[1rem] mt-[4rem] z-[99] flex flex-col absolute lg:bottom-[-54rem]  md:bottom-[-100rem] bottom-[-105rem] pt-[2rem] justify-center w-full items-center'>
+        <div className='bg-[#f9f9f9] md:p-[2rem] p-[1rem] mt-[1rem] z-[99] flex flex-col absolute lg:bottom-[-54rem]  md:bottom-[-100rem] bottom-[-105rem] pt-[2rem] justify-center w-full items-center'>
             {/* heading */}
             <div className='xl:w-[68rem] w-full justify-center flex flex-col gap-10 items-center'>
                 <div className='lg:flex w-full sm:max-w-full max-w-[15rem] relative grid text-center flex-col gap-5'>
