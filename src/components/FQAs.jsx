@@ -11,7 +11,7 @@ function FQAs() {
         )
     }
     return (
-        <div className='sm:mt-0 mt-[45rem] sm:mb-[0] mb-[5rem] p-[2rem] flex justify-center items-center flex-col bg-white'>
+        <div className='lg:mt-0 mt-[45rem] sm:mb-[0] mb-[5rem] p-[2rem] flex justify-center items-center flex-col bg-white'>
             <div className='w-full mt-[6rem] relative  xl:w-[68rem]'>
                 <div className=' justify-between flex flex-col text-center gap-[1rem] sm:p-0 p-[1rem] font-normal'>
                     <h2 className={`${headingText[0].primaryHeadingSmall} `}>{FQAsHeading[0].h2}</h2>
