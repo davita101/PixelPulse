@@ -8,10 +8,11 @@ import { ScrollTrigger } from 'gsap/all';
 function Services() {
     gsap.registerPlugin(ScrollTrigger);
     const [size, setSize] = useState(window.innerWidth)
-    window.addEventListener("resize", () => {
-        setSize(window.innerWidth)
-    })
+
     useEffect(() => {
+        window.addEventListener("resize", () => {
+            setSize(window.innerWidth)
+        })
         // Scroll animation
         let tl = gsap.timeline({
             scrollTrigger: {
@@ -47,7 +48,7 @@ function Services() {
             .to('#HM', { height: '50rem' })
         tl.seek()
         return () => {
-            tl.kill()
+            tl.revert()
         }
     }, [size])
 
@@ -56,7 +57,7 @@ function Services() {
             <div name='/pricing' id='M' className=' w-full absolute bg-white' >
                 <Pricing id='services' className="z-[99] absolute" />
             </div>
-            <div id='F' className='w-full sm:mt-[3rem] mt-[2rem] relative  xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
+            <div id='F' className='w-full sm:mt-[4rem] mt-[2rem] relative  xl:w-[68rem] justify-between flex lg:flex-row flex-col lg:text-start gap-[5rem] sm:p-0 p-[1rem] font-normal'>
                 <div className='lg:flex relative grid lg:text-start text-center flex-col lg:items-start items-center gap-5'>
                     <h2 className={`${headingText[0].primaryHeadingSmall}`}>Choose Your {size > 1024 && <br />} Design Adventure</h2>
                     <p className={`${headingText[0].secondaryParagraph}`}>{serviceHeading[0].p}</p>

@@ -4,20 +4,16 @@ import { heroImagesFirst, heroImagesSecond } from '../utils';
 import "./InfiniteLooper.css"
 function InfiniteLooper() {
   const [amount, setAmount] = useState(5)
-  const [size, setSize] = useState(0)
-  window.addEventListener("resize", () => {
-    setSize(window.innerWidth)
-  })
   useEffect(() => {
 
-    window.addEventListener('resize', () => {
-      if (size <= 640) {
+    window.addEventListener('rewindow.innerWidth', () => {
+      if (window.innerWidth <= 640) {
         setAmount(2)
-      } else if (size >= 1850 && size <= 2550) {
+      } else if (window.innerWidth >= 1850 && window.innerWidth <= 2550) {
         setAmount(3)
 
       }
-      else if (size >= 2550) {
+      else if (window.innerWidth >= 2550) {
         setAmount(7)
         console.log('sss')
       }
@@ -26,13 +22,13 @@ function InfiniteLooper() {
       }
     }
     )
-    if (size <= 640) {
+    if (window.innerWidth <= 640) {
       setAmount(2)
-    } else if (size >= 1850 && size <= 2550) {
+    } else if (window.innerWidth >= 1850 && window.innerWidth <= 2550) {
       setAmount(3)
 
     }
-    else if (size >= 2550) {
+    else if (window.innerWidth >= 2550) {
       setAmount(7)
       console.log('sss')
     }
@@ -45,7 +41,7 @@ function InfiniteLooper() {
       },
       {
 
-        x: size >= 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
+        x: window.innerWidth >= 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
         repeat: -1,
         duration: 10,
         ease: "none"
@@ -53,7 +49,7 @@ function InfiniteLooper() {
       });
     gsap.fromTo("#Y > img",
       {
-        x: size >= 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
+        x: window.innerWidth >= 640 ? ((-360 - 16) * 4) : ((-320 - 16) * 4),
       },
       {
         x: 0,
